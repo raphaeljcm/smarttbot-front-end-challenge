@@ -1,0 +1,14 @@
+.robot_label {
+  color: var(--gray-350);
+  font-weight: 400;
+  font-size: .75rem;
+  padding-inline: .4rem;
+  border: 1px solid var(--gray-150);
+  width: fit-content;
+
+  display: inline-block;
+
+  + div {
+    margin-left: .25rem;
+  }
+}

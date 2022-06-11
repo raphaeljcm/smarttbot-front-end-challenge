@@ -1,0 +1,46 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+
+  > div:first-child {
+    div {
+      display: flex;
+      align-items: center;
+  
+      p {
+        font-weight: 400;
+        font-size: .75rem;
+        color: var(--gray-450);
+        margin-right: .3rem;
+      }
+    }
+
+    p {
+      font-weight: 700;
+      font-size: 1.25rem;
+
+      &.positive {
+        color: var(--cyan-300);
+      }
+
+      &.negative {
+        color: var(--negative);
+      }
+    }
+  }
+
+  > div:last-child {
+    p:first-child {
+      color: var(--gray-450);
+      font-size: .75rem;
+      font-weight: 400;
+    }
+
+    p:last-child {
+      color: var(--gray-500);
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-align: right;
+    }
+  }
+} 
