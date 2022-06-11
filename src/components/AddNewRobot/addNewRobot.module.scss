@@ -1,0 +1,43 @@
+.addRobot {
+  display: flex;
+  align-items: center;
+
+  div:first-of-type {
+    width: 4.68rem;
+    height: 4.37rem;
+    border: 1px solid var(--gray-150);
+    border-radius: 4px;
+    margin-right: 1.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: background-color .7;
+
+    &:hover {
+      background-color: #e3e2e38e;
+    }
+  }
+
+  div:last-of-type {
+    h2 {
+      font-weight: 500;
+      font-size: 1.12rem;
+      margin-bottom: .2rem;
+    }
+
+    p {
+      color: var(--gray-350);
+      font-size: .75rem;
+      font-weight: 400;
+
+      span {
+        color: var(--cyan-200);
+        font-size: .75rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
