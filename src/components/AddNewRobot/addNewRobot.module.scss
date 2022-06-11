@@ -2,12 +2,13 @@
   display: flex;
   align-items: center;
 
-  div:first-of-type {
+  button {
     width: 4.68rem;
     height: 4.37rem;
     border: 1px solid var(--gray-150);
     border-radius: 4px;
     margin-right: 1.6rem;
+    background-color: inherit;
 
     display: flex;
     align-items: center;

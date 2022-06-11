@@ -1,0 +1,91 @@
+.modal_form {
+  margin-top: 1.37rem;
+
+  h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--gray-500);
+    margin-bottom: .4rem;
+  }
+
+  h1 + p {
+    font-weight: 400;
+    font-size: .75rem;
+    color: var(--gray-450);
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 400;
+    font-size: .75rem;
+  }
+
+  input {
+    margin-bottom: 1rem;
+    border-radius: 2px;
+    border: 1px solid var(--gray-150);
+    padding: .87rem;
+    width: 100%;
+  }
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1.3rem; 
+  }
+
+  div:first-of-type {
+    margin-bottom: 2.6rem;
+
+    button {
+      width: 100%;
+      background-color: #ffffff;
+      border: 1px solid var(--gray-150);
+      padding: 1.5rem;
+      border-radius: 2px;
+      color: #6A6C72;
+      text-align: left;
+
+      transition: background-color .4s;
+
+      &.active {
+        background-color: var(--negative);
+        color: var(--gray-50);
+        font-weight: 700;
+        border: none;
+      }
+    }
+
+    button:last-child {
+      margin-top: .4rem;
+    }
+  }
+
+  > div:last-child {
+    display: flex;
+    justify-content: space-between;
+
+    .cancelar,
+    .submit {
+      padding: .5rem 1rem;
+      font-size: .75rem;
+      width: fit-content;
+      border-radius: 2px;
+    }
+
+    .cancelar {
+      color: #6A6C72;
+      background-color: transparent;
+      font-weight: 400;
+      border: 1px solid var(--gray-150);
+    }
+
+    .submit {
+      color: var(--gray-50);
+      background-color: var(--cyan-300); 
+      font-weight: 500;
+      border: none;
+    }
+  }
+}
