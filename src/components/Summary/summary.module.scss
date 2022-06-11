@@ -1,0 +1,56 @@
+.summary {
+  h2 {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 1.5rem; // 24px
+  }
+
+  .container {
+    h3 {
+      color: var(--gray-450);
+      font-weight: 400;
+      font-size: .75rem; // 12px
+    }
+
+    > div:first-of-type {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .total_transactions {
+        text-align: right;
+      }
+
+      .movement span,
+      .total_transactions span {
+        font-weight: 700;
+        font-size: 1.25rem; // 20px
+      }
+
+      .movement span {
+        color: var(--negative);
+      }
+    }
+
+    hr {
+      color: var(--gray-150);
+      margin-block: 1rem;
+    }
+
+    .content {
+      > div {
+        display: flex;
+        justify-content: space-between;
+
+        .box {
+          margin-top: 1rem;
+          width: fit-content;
+
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+        }
+      }
+    }
+  }
+}
