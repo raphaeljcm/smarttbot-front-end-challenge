@@ -34,7 +34,7 @@ export function AddNewRobotModal({ isOpen, onRequestClose }) {
         <label htmlFor="product-name">Nome do produto</label>
         <input type="text" id="product-name" placeholder="Nome do produto" />
         <label htmlFor="initial-capital">Capital inicial do robô</label>
-        <input type="number" id="initial-capital" placeholder="R$" />
+        <input type="number" id="initial-capital" placeholder="R$" step={10} />
 
         <h2>Selecione uma das estratégias abaixo</h2>
         
