@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
+import { toast } from "react-toastify";
 import { api } from "../services/api";
 
 const RobotContext = createContext({});
@@ -11,7 +12,7 @@ export function RobotProvider({ children }) {
       try {
         await api.get('/', { headers: { limit: 10 } }).then(response => setRobots(response.data));
       } catch(err) {
-        console.log(err);
+        toast.error(err.message);
       }
     })()
   }, []);

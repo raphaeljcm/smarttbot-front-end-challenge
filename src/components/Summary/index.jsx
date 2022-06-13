@@ -3,6 +3,8 @@ import commomStyles from '../../styles/common.module.scss';
 import styles from './summary.module.scss';
 import { SummaryContent } from './SummaryContent';
 import { api } from "../../services/api";
+import { toast } from 'react-toastify';
+import { ClipLoader } from 'react-spinners';
 
 export function Summary() {
   const [summary, setSummary] = useState();
@@ -12,7 +14,7 @@ export function Summary() {
       try {
         await api.get('/overview').then(response => setSummary(response.data.data));
       } catch(err) {
-        console.log(err);
+        toast.error(err.message);
       }
     })()
   }, []);
@@ -60,7 +62,9 @@ export function Summary() {
           </div>
         </>
       ) : (
-        <h2>Carregando dados...</h2>
+        <>
+          <ClipLoader size={25} color='#00B39D' /> <span>Carregando dados...</span>
+        </>
       )}
     </section>
   );  

@@ -3,10 +3,11 @@ import styles from './robotBox.module.scss';
 import { RobotContent } from './RobotContent';
 import { RobotFooter } from './RobotFooter';
 import { RobotLabel } from './RobotLabel';
+import { ClipLoader } from 'react-spinners';
 
 export function RobotBox() {
   const { robots } = useRobot();  
-  console.log(robots.data)
+  console.log(robots.data);
 
   return (
     <>
@@ -29,7 +30,7 @@ export function RobotBox() {
               <RobotLabel value={ robot.type } />
             </div>
       
-            { robot.running === 0 ? (
+            { robot?.last_paper ? (
               <RobotContent  
                 position={robot.last_paper.position}
                 paper={robot.last_paper.paper}
@@ -38,14 +39,16 @@ export function RobotBox() {
                 profit={robot.last_paper.profit}
               />
             ) : (
-              <RobotContent isRunning />
+              <RobotContent isEmptyData />
             ) }
       
             <RobotFooter daily_balance={robot.daily_balance} number_trades={robot.number_trades} />
           </div>
-        ))
-      : (
-        <h2>Loading...</h2>
+        ))   
+        : (
+        <>
+          <ClipLoader size={25} color='#00B39D' /> <span>Carregando...</span>
+        </>
       )}
     </>
   );

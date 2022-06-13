@@ -6,6 +6,7 @@ import { Header } from "./components/Header";
 import { Robot } from "./components/Robot";
 import { Summary } from "./components/Summary";
 import "./styles/globals.scss";
+import { ToastContainer } from 'react-toastify';
 
 // for modal accessibility
 ReactModal.setAppElement('#root');
@@ -31,6 +32,7 @@ function App() {
 
         <AddNewRobotModal isOpen={isAddNewRobotModalOpen} onRequestClose={handleCloseAddNewRobotModal} />
       </main>
+        <ToastContainer autoClose={3000} />
     </>
   );
 }

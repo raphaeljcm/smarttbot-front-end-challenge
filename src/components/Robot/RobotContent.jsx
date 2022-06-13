@@ -1,9 +1,9 @@
 import styles from './robotContent.module.scss';
 
-export function RobotContent({ isRunning = false, position, paper, type, paper_value, profit }) {
+export function RobotContent({ isEmptyData = false, position, paper, type, paper_value, profit }) {
   return (
     <div className={styles.robot_content}>
-      { !isRunning ? (
+      { !isEmptyData ? (
         <>
           <span>
             {position}
@@ -28,7 +28,7 @@ export function RobotContent({ isRunning = false, position, paper, type, paper_v
           </div>
         </>
       ) : (
-        <h2>Loading...</h2>
+        <h2>Procurando trade...</h2>
       ) }
     </div>
   );
