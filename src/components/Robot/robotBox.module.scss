@@ -47,3 +47,9 @@
     margin-block: .3rem;
   }
 }
+
+@media (max-width: 760px) {
+  .robot_box {
+    flex: 1;
+  }
+}

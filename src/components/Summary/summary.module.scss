@@ -56,3 +56,13 @@
     }
   }
 }
+
+@media (max-width: 1200px) {
+  .summary {
+    .content {
+      > div {
+        flex-direction: column;
+      }
+    }
+  }
+}
