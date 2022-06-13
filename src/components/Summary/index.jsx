@@ -2,15 +2,18 @@ import { useEffect, useState } from 'react';
 import commomStyles from '../../styles/common.module.scss';
 import styles from './summary.module.scss';
 import { SummaryContent } from './SummaryContent';
+import { api } from "../../services/api";
 
 export function Summary() {
   const [summary, setSummary] = useState();
 
   useEffect(() => {
     (async function() {
-      await fetch('https://api-front-test.k8s.smarttbot.com/api/v1/robot/overview')
-      .then(response => response.json())
-      .then(data => setSummary(data.data));
+      try {
+        await api.get('/overview').then(response => setSummary(response.data.data));
+      } catch(err) {
+        console.log(err);
+      }
     })()
   }, []);
 

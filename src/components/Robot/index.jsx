@@ -5,11 +5,6 @@ export function Robot() {
   return (
     <section className={styles.robot_container}>
       <RobotBox />
-      <RobotBox />
-      <RobotBox />
-      <RobotBox />
-      <RobotBox />
-      <RobotBox />
     </section>
   );
 }
