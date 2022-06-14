@@ -12,13 +12,12 @@ import { useRobot } from "../../hooks/useRobot";
 
 const createRobotFromSchema = yup.object().shape({
   title: yup.string().required('Nome do produto obrigatório'),
-  initial_capital: yup.number().required('Capital inicial obrigatório')
+  initial_capital: yup.number().positive('O número precisa ser positivo').required('Capital inicial obrigatório')
 });
 
 export function AddNewRobotModal({ isOpen, onRequestClose }) {
   const [type, setType] = useState('tangram');
-  const { register, handleSubmit, formState, resetField } = useForm({ resolver: yupResolver(createRobotFromSchema) });
-  const { errors } = formState;
+  const { register, handleSubmit, resetField } = useForm({ resolver: yupResolver(createRobotFromSchema) });
   const { setAddedRobots } = useRobot();
 
   async function handleCreateRobot(data) {
@@ -42,16 +41,15 @@ export function AddNewRobotModal({ isOpen, onRequestClose }) {
     }
   }
 
-  function handleError(errorName) {
-    switch (errorName) {
-      case 'title':
+  function handleError(errors) {
+    if(errors) {
+      if(errors.title) {
         toast.error(errors.title.message);
-        break;
-      case 'capital':
+      }
+  
+      if(errors.initial_capital) {
         toast.error(errors.initial_capital.message);
-        break;
-      default:
-        break;
+      }
     }
   }
 
@@ -71,7 +69,7 @@ export function AddNewRobotModal({ isOpen, onRequestClose }) {
         <img src={closeModal} alt="fechar modal" />
       </button>
 
-      <form className={styles.modal_form} onSubmit={handleSubmit(handleCreateRobot)}>
+      <form className={styles.modal_form} onSubmit={handleSubmit(handleCreateRobot, handleError)}>
         <h1>Vamos criar seu robô</h1>
         <p>Preencha as informações abaixo:</p>
 
@@ -83,7 +81,6 @@ export function AddNewRobotModal({ isOpen, onRequestClose }) {
           name="title" 
           {...register('title')}
         />
-        { errors.title && handleError('title') }
 
         <label htmlFor="initial-capital">Capital inicial do robô</label>
         <input 
@@ -94,7 +91,6 @@ export function AddNewRobotModal({ isOpen, onRequestClose }) {
           name="initial_capital"
           {...register('initial_capital')}
         />
-        { errors.initial_capital && handleError('capital') }
 
         <h2>Selecione uma das estratégias abaixo</h2>
         
