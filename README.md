@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+<h1 align="center">SMARTTBOT FRONT END CHALLENGE</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</br>
 
-## Available Scripts
+<p align="center">
+  <img alt="Smarttbot challenge" src=".github/smarttbot-app.PNG">
+</p>
 
-In the project directory, you can run:
+</br>
 
-### `yarn start`
+## 🧾 Sobre
+Fala galera da Smarttbot, fico muito feliz por terem me considerado para fazer este desafio e curti demais fazê-lo também. Algumas observações que eu gostaria de mencionar:
+- Durante a codificação, eu percebi que a API não estava atualizando os dados, ou seja, alguns dados não vinham com o objeto "last_paper" que contém os dados do atual paper (a não ser que eu tenha entendido errado, se for esse o caso peço perdão 😅). Então o que fiz foi colocar um "Carregando trade".
+- Na página inicial estou mostrando 10 robôs por paginação, os robôs que são adicionados pelo POST estão aparecendo logo após os 10 primeiros.
+- No layout do Figma está aparecendo para selecionar 2 estratégias: "Tangram" e "Price Action", porém na API Price Action é um type, fiquei meio perdido nessa parte, então coloquei dados padrões quando o Price Action é selecionado.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+</br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧪 Tecnologias
 
-### `yarn test`
+Desenvolvi o projeto com as seguintes tecnologias:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ReactJS
+- Css Modules
+- Sass
+- Axios 
+- React Hook Form
+- React Spinners 
+- React Toastify
+- Yup 
 
-### `yarn build`
+</br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Rodando o projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone o projeto e acesse a pasta:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/raphaeljcm/smarttbot-front-end-challenge.git
 
-### `yarn eject`
+cd smarttbot-front-end-challenge
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Rode esses comandos para instalar as dependências e rodar o projeto em develoment mode:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+yarn install ou npm install
+yarn start ou npm start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+O projeto estará rodando em http://localhost:3000
 
-## Learn More
+</br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 💻 Preview
+O preview do projeto pode ser visto em https://smarttbot-front-end-challenge.vercel.app/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+</br>
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feito com muito ☕ por Raphael Marques!
