@@ -9,7 +9,7 @@
 </br>
 
 ## 🧾 Sobre
-Fala galera da Smarttbot, fico muito feliz por terem me considerado para fazer este desafio e curti demais fazê-lo também. Fiz uma documentação mais completinha no Notion, pra acessar só clicar [aqui](https://imported-lobe-b54.notion.site/Smarttbot-Front-end-Challenge-d06e036e7d794443844501ad61034049)
+Fala galera da Smarttbot, fico muito feliz por terem me considerado para fazer este desafio e curti demais codar a aplicação, já deixo aqui o meu obrigado! Fiz uma documentação mais completinha no Notion, pra acessar só clicar [aqui](https://imported-lobe-b54.notion.site/Smarttbot-Front-end-Challenge-d06e036e7d794443844501ad61034049)
 
 </br>
 
