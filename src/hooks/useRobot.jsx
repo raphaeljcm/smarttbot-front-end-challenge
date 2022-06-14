@@ -6,6 +6,7 @@ const RobotContext = createContext({});
 
 export function RobotProvider({ children }) {
   const [robots, setRobots] = useState([]);
+  const [addedRobots, setAddedRobots] = useState([]);
 
   useEffect(() => {
     (async function() {
@@ -18,7 +19,7 @@ export function RobotProvider({ children }) {
   }, []);
 
   return (
-    <RobotContext.Provider value={{ robots, setRobots }}>
+    <RobotContext.Provider value={{ robots, setRobots, addedRobots, setAddedRobots }}>
       { children }
     </RobotContext.Provider>
   );

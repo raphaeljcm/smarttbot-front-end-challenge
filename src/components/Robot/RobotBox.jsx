@@ -6,8 +6,7 @@ import { RobotLabel } from './RobotLabel';
 import { ClipLoader } from 'react-spinners';
 
 export function RobotBox() {
-  const { robots } = useRobot();  
-  console.log(robots.data);
+  const { robots, addedRobots } = useRobot();  
 
   return (
     <>
@@ -47,9 +46,44 @@ export function RobotBox() {
         ))   
         : (
         <>
-          <ClipLoader size={25} color='#00B39D' /> <span>Carregando...</span>
+          <ClipLoader size={25} color='#00B39D' /> <span>Carregando robôs...</span>
         </>
       )}
+      
+      { addedRobots && 
+        addedRobots.map(robot => (
+          <div key={robot.data.id} className={styles.robot_box}>
+            <header>
+              <h2>{ robot.data.title }</h2>
+              <div>
+                <div className={ robot.data.running === 1 ? `${styles.green}`: `${styles.red}`}></div>
+                <span>{ robot.data.running === 1 ? 'Em execução' : 'Parado' }</span>
+              </div>
+            </header>
+      
+            <p>#{robot.data.id}</p>
+      
+            <div>
+              <RobotLabel value={ robot.data.simulation === 0 ? 'Otimista' : 'Pessimista' } />
+              <RobotLabel value={ robot.data.stock_codes } />
+              <RobotLabel value={ robot.data.type } />
+            </div>
+      
+            { robot.data?.last_paper ? (
+              <RobotContent  
+                position={robot.data.last_paper.position}
+                paper={robot.data.last_paper.paper}
+                type={robot.data.last_paper.type}
+                paper_value={robot.data.last_paper.paper_value}
+                profit={robot.data.last_paper.profit}
+              />
+            ) : (
+              <RobotContent isEmptyData />
+            ) }
+      
+            <RobotFooter daily_balance={robot.data.daily_balance} number_trades={robot.data.number_trades} />
+          </div>
+        ))}
     </>
   );
 }
