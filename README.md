@@ -54,7 +54,7 @@ O projeto estará rodando em http://localhost:3000
 </br>
 
 ## 💻 Preview
-O preview do projeto pode ser visto [aqui](https://smarttbot-front-end-challenge.vercel.app/){:target="_blank"}
+O preview do projeto pode ser visto <a href="https://smarttbot-front-end-challenge.vercel.app/" target="_blank">aqui</a>
 
 </br>
 
