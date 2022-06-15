@@ -5,8 +5,9 @@ import { RobotFooter } from './RobotFooter';
 import { RobotLabel } from './RobotLabel';
 import { ClipLoader } from 'react-spinners';
 
+
 export function RobotBox() {
-  const { robots, addedRobots } = useRobot();  
+  const { robots, addedRobots } = useRobot(); 
 
   return (
     <>
