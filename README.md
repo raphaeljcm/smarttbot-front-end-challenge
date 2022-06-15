@@ -9,10 +9,7 @@
 </br>
 
 ## 🧾 Sobre
-Fala galera da Smarttbot, fico muito feliz por terem me considerado para fazer este desafio e curti demais fazê-lo também. Algumas observações que eu gostaria de mencionar:
-- Durante a codificação, eu percebi que a API não estava atualizando os dados, ou seja, alguns dados não vinham com o objeto "last_paper" que contém os dados do atual paper (a não ser que eu tenha entendido errado, se for esse o caso peço perdão 😅). Então o que fiz foi colocar um "Carregando trade".
-- Na página inicial estou mostrando 10 robôs por paginação, os robôs que são adicionados pelo POST estão aparecendo logo após os 10 primeiros.
-- No layout do Figma está aparecendo para selecionar 2 estratégias: "Tangram" e "Price Action", porém na API Price Action é um type, fiquei meio perdido nessa parte, então coloquei dados padrões quando o Price Action é selecionado.
+Fala galera da Smarttbot, fico muito feliz por terem me considerado para fazer este desafio e curti demais codar a aplicação, já deixo aqui o meu obrigado! Fiz uma documentação mais completinha no Notion, pra acessar só clicar [aqui](https://imported-lobe-b54.notion.site/Smarttbot-Front-end-Challenge-d06e036e7d794443844501ad61034049)
 
 </br>
 
@@ -54,7 +51,7 @@ O projeto estará rodando em http://localhost:3000
 </br>
 
 ## 💻 Preview
-O preview do projeto pode ser visto em https://smarttbot-front-end-challenge.vercel.app/
+O preview do projeto pode ser visto [aqui](https://smarttbot-front-end-challenge.vercel.app/)
 
 </br>
 
