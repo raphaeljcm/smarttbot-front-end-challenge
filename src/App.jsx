@@ -32,7 +32,7 @@ function App() {
 
         <AddNewRobotModal isOpen={isAddNewRobotModalOpen} onRequestClose={handleCloseAddNewRobotModal} />
       </main>
-        <ToastContainer autoClose={3000} />
+      <ToastContainer autoClose={3000} />
     </>
   );
 }

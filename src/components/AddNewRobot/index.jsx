@@ -27,5 +27,3 @@ export function AddNewRobot({ onOpenAddNewRobotModal }) {
     </section>
   );
 }
-
-// Maybe change the div to a button later

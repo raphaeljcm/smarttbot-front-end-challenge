@@ -24,7 +24,7 @@ export function AddNewRobotModal({ isOpen, onRequestClose }) {
     try {
       const result = await api.post('/', {
         ...data,
-        strategy_id: type === 'tangram' ? 2 : 1,
+        strategy_id: type === 'raptor' ? 1 : 2,
         simulation: 0,
         broker_id: 1,
         mode: 0
@@ -105,10 +105,10 @@ export function AddNewRobotModal({ isOpen, onRequestClose }) {
 
           <button
             type="button"
-            className={type === 'price_action' ? `${styles.active}` : ''}
-            onClick={() => setType('price_action')}
+            className={type === 'raptor' ? `${styles.active}` : ''}
+            onClick={() => setType('raptor')}
           >
-            Price Action
+            Raptor
           </button>
         </div>
 

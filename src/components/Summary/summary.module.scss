@@ -34,7 +34,7 @@
       }
     }
 
-    hr {
+    > hr {
       color: var(--gray-150);
       margin-block: 1rem;
     }
@@ -46,7 +46,7 @@
 
         .box {
           margin-top: 1rem;
-          width: fit-content;
+          width: 100%;
 
           display: flex;
           flex-direction: column;
