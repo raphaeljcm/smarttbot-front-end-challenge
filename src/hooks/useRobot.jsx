@@ -10,6 +10,7 @@ export function RobotProvider({ children }) {
   const [addedRobots, setAddedRobots] = useState([]);
   const { setTotalPages, LIMIT, currentPage } = usePagination();
 
+  // get totalPages
   useEffect(() => {
     (async function() {
       try {
@@ -20,6 +21,7 @@ export function RobotProvider({ children }) {
     })()
   }, [robots, LIMIT]);
 
+  // get all robots
   useEffect(() => {
     (async function() {
       try {
